@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Survey Form</title>
+    <meta charset="utf-8"> <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 id="title">Camper Cafe Survey Form</h1>
+        <p id="description">Please fill out this form with the required information</p>
+        <form id="survey-form">
+            <fieldset>
+                <label for="name" id="name-label">Name: <input id="name" type="text" placeholder="Enter your name" required name="name" ></label> 
+                <label for="email" id="email-label">Email: <input id="email" type="email" placeholder="Enter your email" required name="email" ></label>
+                <label for="number" id="number-label">Phone NO: <input id="number" type="number" pattern="[a-z0-5]{8,}" placeholder="Enter phone number" required name="number" min="12" max="40" ></label>
+                <label for="age">Age (Optional):<input type="number" min="18" max="120" placeholder="Age" id="age" name="age" ></label>
+                <label for="dropdown">What is your favorite Coffee flavor?
+                <select id="dropdown" name="favorite-coffee">
+                  <option value="" id=>select an option</option>
+                  <option value="1">Affogato</option>
+                  <option value="2">Iced Coffee</option>
+                  <option value="3">Frappuccino</option>
+                  <option value="4">Other</option>
+                </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="yes"><input id="yes" type="radio" name="visited" class="inline" value="yes" checked > Yes</label>
+                <label for="no"><input id="no" type="radio" name="visited" class="inline" value="no" checked > No</label>
+                <label for="planning-to"><input id="planning-to" type="radio" name="visited" class="inline" value="planning-to" checked > Planning to</label>
+                <legend>Have you visited Camper Cafe?</legend>
+                <label for="dropdown">How often do you visit Camper Cafe?
+                  <select id="dropdown" name="visit">
+                    <option value="">select an option</option>
+                    <option value="1">Everyday</option>
+                    <option value="2">Few days in a week</option>
+                    <option value="3">Planning to visit</option>
+                  </select>
+                </label>
+                </fieldset>
+                <fieldset>
+                  <legend>What do you want to see improved? (check all that apply)</legend>
+                  <label for="coffee-flavor"><input id="coffee-flavor" type="checkbox" name="coffee-flavor" class="inline" value="coffee-flavor">Teste of the coffee flavor</label>
+                  <label for="furnitures-and-cafe"><input id="furnitures-and-cafe" type="checkbox" name="furnitures-and-cafe" class="inline" value="furnitures-and-cafe">Furnitures and Cafe setup</label>
+                  <label for="customer-care"><input id="customer-care" type="checkbox" name="customer-care" class="inline" value="customer-care" >Customer Care</label>
+                  <label for="workers-orientation"><input id="workers-orientation" type="checkbox" name="workers-orientation" class="inline" value="workers-orientation">Workers Orientation</label>
+                  <label for="management"><input id="management" type="checkbox" name="management" class="inline" value="management">Management</label>
+                </fieldset>
+                <fieldset>
+                <label for="comment">What do you have to say about Camper Cafe?
+                  <textarea id="comment" rows="3" cols="30" placeholder="What I love about Camper Cafe is..."></textarea>
+                </label>
+            </fieldset>
+            <input type="submit" value="Submit" id="submit"/>
+        </form>
+  </body>
+</html>
